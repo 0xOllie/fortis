@@ -24,6 +24,11 @@ variable "database_subnet_ids" {
   description = "A list of database subnet IDs, used by RDS."
 }
 
+variable "database_subnet_group_name" {
+  type        = string
+  description = "Name of database subnet group, used by RDS."
+}
+
 variable "key_name" {
   type        = string
   default     = "fortis"

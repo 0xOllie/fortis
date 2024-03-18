@@ -27,9 +27,10 @@ module "vpc" {
 }
 
 module "webapp" {
-  source              = "./modules/webapp"
-  vpc_id              = module.vpc.vpc_id
-  public_subnet_ids   = module.vpc.public_subnets
-  private_subnet_ids  = module.vpc.private_subnets
-  database_subnet_ids = module.vpc.database_subnets
+  source                     = "./modules/webapp"
+  vpc_id                     = module.vpc.vpc_id
+  public_subnet_ids          = module.vpc.public_subnets
+  private_subnet_ids         = module.vpc.private_subnets
+  database_subnet_ids        = module.vpc.database_subnets
+  database_subnet_group_name = module.vpc.database_subnet_group_name
 }
